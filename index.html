@@ -1,0 +1,44 @@
+<html>
+
+<body>
+
+  <script type="text/javascript">
+    
+    Object.prototype.reduce = reduce;
+    //reduce 함수를 전역으로 사용하기 위해 Object.prototype에 등록 
+
+    //구현부
+    var reduce = function (list, callback, initVal) {
+      // parameters: list, callback function, initial value
+
+      var currentVal = 0;
+
+      for (var i = 0; i < list.length; i++) {
+        if (!i) { // i = 0일 경우에만 currentVal을 초기 시작값으로 
+          currentVal = initVal;
+        } else { // 이전 결과값이 currentVal이 된다.
+          currentVal = result;
+        }
+
+        if (initVal === undefined && i === 0) {
+          // initVal가 정의되지 않았을 경우 이전결과 값은 list의 index 0번째 값이 된다.  
+          result = list[0];
+        } else {
+          result = callback(currentVal, list[i]);
+          // callback function에 이전 결과값과 현재 index값에 대한 value를 넘겨준다
+        }
+      }
+      return result; // reduce의 결과값 return
+    };
+
+
+    //테스트
+    var array = [1, 2, 3, 4];
+    var result = reduce(array, function (a, b) { return a + b; }, 4);
+    console.log(result);
+  
+  </script>
+
+</body>
+
+</html>

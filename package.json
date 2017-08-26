@@ -1,0 +1,23 @@
+{
+  "name": "underscore",
+  "version": "1.0.0",
+  "description": "underscore study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/documentcloud/underscore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/documentcloud/underscore/issues"
+  },
+  "homepage": "https://github.com/documentcloud/underscore#readme",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "underscore": "1.8.3"
+  }
+}
